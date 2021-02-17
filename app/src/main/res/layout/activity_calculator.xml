@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorActivity">
+
+    <TextView
+        android:id="@+id/welcomePrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/welcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/welcomePrompt"
+        app:layout_constraintStart_toEndOf="@+id/welcomePrompt"
+        app:layout_constraintTop_toTopOf="@+id/welcomePrompt" />
+
+    <TextView
+        android:id="@+id/weightPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/weightPrompt"
+        app:layout_constraintStart_toStartOf="@+id/welcomePrompt"
+        app:layout_constraintTop_toBottomOf="@+id/welcomePrompt" />
+
+    <TextView
+        android:id="@+id/heightPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/heightPrompt"
+        app:layout_constraintStart_toStartOf="@+id/weightPrompt"
+        app:layout_constraintTop_toBottomOf="@+id/weightPrompt" />
+
+    <EditText
+        android:id="@+id/weightInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/weightPrompt"
+        app:layout_constraintStart_toEndOf="@+id/weightPrompt"
+        app:layout_constraintTop_toTopOf="@+id/weightPrompt"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/heightInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/heightPrompt"
+        app:layout_constraintStart_toStartOf="@+id/weightInput"
+        app:layout_constraintTop_toTopOf="@+id/heightPrompt"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/kg"
+        app:layout_constraintBottom_toBottomOf="@+id/weightInput"
+        app:layout_constraintStart_toEndOf="@+id/weightInput"
+        app:layout_constraintTop_toTopOf="@+id/weightInput" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/m"
+        app:layout_constraintBottom_toBottomOf="@+id/heightInput"
+        app:layout_constraintStart_toEndOf="@+id/heightInput"
+        app:layout_constraintTop_toTopOf="@+id/heightInput" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/status"
+        app:layout_constraintStart_toStartOf="@+id/welcomePrompt"
+        app:layout_constraintTop_toBottomOf="@+id/heightPrompt" />
+
+    <TextView
+        android:id="@+id/statusMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/status"
+        app:layout_constraintStart_toEndOf="@+id/status"
+        app:layout_constraintTop_toTopOf="@+id/status" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusMessage" />
+</androidx.constraintlayout.widget.ConstraintLayout>
